@@ -1,0 +1,129 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
+
+.hamburger {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-links a:hover,
+.nav-cta a:hover {
+  color: #2d4a8a;
+}
+
+.nav-links .cta {
+  background-color: #2d4a8a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.nav-links .cta:hover {
+  background-color: white;
+  color: #2d4a8a;
+  border: 1px solid #2d4a8a;
+}
+
+.register-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.register-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.register-illustration img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.register-form h2,
+.register-form p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border: 1px solid #2d4a8a;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  background-color: #2d4a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #155ec0;
+}
+
+.radio-group label {
+  width: 80px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.no {
+  margin-left: -4px;
+}
