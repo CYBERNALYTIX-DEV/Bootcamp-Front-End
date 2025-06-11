@@ -33,3 +33,30 @@ document.addEventListener('click', () => {
     icon.src = 'images/menu.svg';
   }
 });
+
+//get data from register form
+document.getElementById('bootcampForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const form = this;
+  const formData = new FormData(form);
+  const data = {
+    fullname: formData.get('fullname'),
+    tel: formData.get('tel'),
+    email: formData.get('email'),
+    gender: formData.get('gender'),
+    residence: formData.get('residence'),
+    employment: formData.get('employment'),
+    proficiency: formData.get('proficiency'),
+    motivation: formData.get('motivation'),
+    expectation: formData.get('expectation'),
+    experience: formData.get('experience'),
+    referer: formData.get('referer'),
+    session: formData.get('session'),
+    certificate: formData.get('certificate')
+  };
+
+  console.log('Submitted Data', data);
+  alert('your response has been received');
+  form.reset();
+});

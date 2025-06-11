@@ -1,47 +1,3 @@
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  position: sticky;
-  top: 0;
-  background: white;
-  z-index: 1000;
-}
-
-.hamburger {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav-links a {
-  margin-left: 2rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.nav-links a:hover,
-.nav-cta a:hover {
-  color: #2d4a8a;
-}
-
-.nav-links .cta {
-  background-color: #2d4a8a;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-}
-
-.nav-links .cta:hover {
-  background-color: white;
-  color: #2d4a8a;
-  border: 1px solid #2d4a8a;
-}
-
 .register-section {
   padding: 60px 20px;
   background-color: #f9f9f9;
@@ -49,7 +5,7 @@
 
 .register-container {
   display: flex;
-  gap: 40px;
+  gap: 80px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -57,9 +13,18 @@
   margin: auto;
 }
 
+.register-illustration {
+  flex: 0 1 220px;
+  max-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .register-illustration img {
   width: 100%;
-  max-width: 400px;
+  max-width: 250px;
+  height: auto;
 }
 
 .register-form {
@@ -73,8 +38,12 @@
 
 .register-form h2,
 .register-form p {
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 20px;
+}
+
+.register-form p {
+  font-size: .9rem;
 }
 
 form label {
@@ -100,9 +69,8 @@ form textarea:focus {
 }
 
 form button {
-  width: 100%;
+  width: 50%;
   padding: 12px;
-  margin-top: 25px;
   background-color: #2d4a8a;
   color: white;
   border: none;
@@ -114,6 +82,18 @@ form button {
 
 form button:hover {
   background-color: #155ec0;
+}
+
+.submit-confirm {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.submit-confirm p {
+  width: 50%;
+  margin-bottom: 0;
+  font-size: 0.8rem;
 }
 
 .radio-group label {

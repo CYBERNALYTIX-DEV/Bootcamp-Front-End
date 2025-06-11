@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="register.css">
   <link rel="stylesheet" href="style.css">
   <title>Bootcamp</title>
@@ -44,35 +43,58 @@
         <h2>Register for the Bootcamp</h2>
         <p>Please fill in your details below.</p>
 
-        <form>
-          <label>Username:</label>
-          <input type="" name="fullname" required>
+        <form id="bootcampForm">
+          <label>Name</label>
+          <input name="fullname" placeholder="First Name, Last Name" required>
 
-          <label>Password/Access code:</label>
-          <input type="password" name="password" required>
+          <label>Phone Number</label>
+          <input name="tel" placeholder="e.g +234 801 234 5678" required>
 
-          <label>What specifically motivated you to apply for this cybersecurity bootcamp?</label>
-          <textarea name="motivation" rows="3" required></textarea>
+          <label>Email Address</label>
+          <input name="email" placeholder="e.g abc@gmail.com" required>
 
-          <label>What do you hope to achieve by completing this bootcamp? (e.g career change, skill enhancement,
-            certification preparation)</label>
-          <textarea name="expectation" rows="3" required></textarea>
+          <label>Gender</label>
+          <input name="gender" placeholder="Male or Female" required>
 
-          <label>Have you had any prior expossure to cybersecurity concepts or tools? If Yes, please describe?</label>
-          <textarea name="experience" rows="3" required></textarea>
+          <label>Country of Residence</label>
+          <input name="residence" placeholder="Where you live" required>
 
-          <label>Do you have access to a reliable internet connection?</label>
-          <div class="radio-group">
-            <label>Yes<input type="radio" name="has-internet" value="yes"> </label>
-            <label class="no">No<input type="radio" name="has-internet" value="no"> </label>
+          <label>Current Engagement</label>
+          <input name="employment" placeholder="Student, Employed / Unemployed" required>
+
+          <label>IT / Computer Proficiency</label>
+          <input name="proficiency" placeholder="Beginner, Intermediate, Professional" required>
+
+          <label>Motivation</label>
+          <p>What motivated you to apply for this cybersecurity bootcamp?</p>
+          <textarea name="motivation" rows="3"
+            placeholder="Share your reasons - e.g passion, curiosity, real-world impact, etc." required></textarea>
+
+          <label>Goals</label>
+          <p>What do you hope to achieve by completing this bootcamp?</p>
+          <textarea name="expectation" rows="3" placeholder="Write your short-term and long-term goals"
+            required></textarea>
+
+          <label>Experience</label>
+          <p>Have you previously engaged with any cybersecurity concepts, tools, or learning platforms?</p>
+          <textarea name="experience" rows="3" placeholder="Briefly describe any prior exposure or related experience"
+            required></textarea>
+
+          <label>How did you hear about this bootcamp?</label>
+          <input name="referer" placeholder="LinkedIn, Facebook, Twitter/X, WhatsApp" required>
+
+          <label>Time Commitment</label>
+          <p>How many hours are you willing to commit to each session of this bootcamp if admitted?</p>
+          <input name="session" placeholder="e.g 3-5 hours per session" required>
+
+          <label>Certificate Preference</label>
+          <p>Would you like to be awarded certificate of completion after this program?</p>
+          <input name="certificate" placeholder="Yes / No, Unsure" required>
+
+          <div class="submit-confirm">
+            <button type="submit">Submit</button>
+            <p>You will receive a confirmation email within 24 hours after submission.</p>
           </div>
-
-          <label>Do you have access to a personal computer?</label>
-          <div class="radio-group">
-            <label>Yes<input type="radio" name="has-computer" value="yes"> </label>
-            <label class="no">No<input type="radio" name="has-computer" value="no"> </label>
-          </div>
-          <button type="submit">Submit</button>
         </form>
       </div>
     </div>

@@ -49,13 +49,15 @@ body {
 .nav-links .cta:hover {
   background-color: white;
   color: #2d4a8a;
+  transition: 0.3s;
   border: 1px solid #2d4a8a;
 }
 
 .hero {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   min-height: 70vh;
   padding: 60px 5%;
   color: white;
@@ -96,10 +98,12 @@ body {
   background-color: #2d4a8a;
   color: white;
   padding: 0.7rem 1.5rem;
+  margin-top: 0.5rem;
   border-radius: 6px;
   border: none;
   font-weight: bold;
   text-decoration: none;
+  display: inline-block;
 }
 
 .cta-button:hover {
@@ -109,22 +113,25 @@ body {
 .flashcards {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2.5rem;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 4rem;
   z-index: 3;
 }
 
 .card {
   background: #2d4a8a;
-  padding: 1rem;
+  padding: 2rem 0.5rem 1rem 1rem;
   border-radius: 12px;
   width: 260px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
+
 .card h3 {
   font-size: 1rem;
 }
+
 .card p {
   font-size: 14px;
 }
@@ -135,71 +142,150 @@ body {
 }
 
 .card-icon {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 60px;
-  margin: 0 auto 15px auto;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border: 2px solid #2d4a8a;
 }
 
 .card-icon img {
-  width: 100%;
-  height: auto;
+  width: 32px;
+  height: 32px;
 }
 
-.about-section {
+.about-us {
   background-color: #2d4a8a;
   color: white;
-  text-align: center;
-  padding: 80px 20px;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  max-width: 1300px;
-  margin: 0 auto;
+.about-us h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.about-section p {
-  font-size: 1.1rem;
-  margin-bottom: 50px;
-  color: #ccc;
-}
-
-.about-text {
-  flex: 1;
-  max-width: 700px;
-}
-
-.about-item {
+.about-content {
   display: flex;
   align-items: center;
-  gap: 30px;
-  background: transparent;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-.about-item img {
-  width: 150px;
-  min-width: 150px;
-  height: auto;
-  margin-bottom: 0;
+.text {
+  flex: 1;
+  min-width: 300px;
 }
 
-.about-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #ffc107;
-}
-
-.about-item p {
+.text h4 {
+  font-weight: normal;
   margin-bottom: 10px;
+}
+
+.text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.text a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.learn-more {
+  padding: 12px 24px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.learn-more:hover {
+  background: white;
+  color: #2d4a8a;
+}
+
+/* --- Offerings Section --- */
+.offerings-section {
+  padding: 60px 20px 80px;
+  /* background-color: #255ff4; */
+  background-color: #2d4a8a;
+  text-align: center;
+  color: white;
+}
+
+.offerings-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.offerings-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.offer-box {
+  background-color: #1a2651;
+  /* border-radius: 20px; */
+  padding: 30px 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.offer-box:hover {
+  transform: translateY(-5px);
+}
+
+.offer-box img {
+  width: 80px;
+  height: 50px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+.offer-box h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.offer-box p {
   font-size: 0.9rem;
-  color: #eee;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.offer-box a {
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 0.9rem;
 }
 
 .contact-section {
@@ -372,28 +458,14 @@ body {
   }
 
   .hero {
-    flex-direction: column;
-    text-align: center;
+    justify-content: start;
+    gap: 50px;
     padding: 2rem;
+    min-height: 60vh;
   }
 
   .hero-content h1 {
     font-size: 2rem;
-  }
-
-  .hero,
-  .about-us,
-  .contact-section {
-    padding: 30px 10px;
-    min-height: 40vh;
-  }
-  .about-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-item img {
-    margin-bottom: 20px;
   }
 }
 
