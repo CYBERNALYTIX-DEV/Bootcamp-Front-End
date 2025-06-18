@@ -43,7 +43,7 @@
 }
 
 .register-form p {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 form label {
@@ -65,7 +65,9 @@ form input:focus,
 form textarea:focus {
   outline: none;
   border: 1px solid #2d4a8a;
-  transition: border 0.3s, box-shadow 0.3s;
+  transition:
+    border 0.3s,
+    box-shadow 0.3s;
 }
 
 form button {
