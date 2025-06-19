@@ -43,12 +43,23 @@
       <div class="register-illustration">
         <img src="images/register.svg" alt="register Illustration">
       </div>
-
+      <div class="form-note">
+        <h4>INSTRUCTION:</h4>
+        <p>All applicants will be given a fair and equal opportunity. Responses must be entirely original and written by
+          you. The use of AI tools such as ChatGPT, Bard, or Copilot to generate or assist with your answers is strictly
+          prohibited. This application is designed to assess your personal understanding, readiness, willingness to
+          learn, and ability to communicate your thoughts clearly. Submissions that appear to be generated or
+          significantly influenced by AI may be disqualified or rejected.</p>
+      </div>
       <div class="register-form">
         <h2>Register for the Bootcamp</h2>
         <p>Please fill in your details below.</p>
 
-        <form id="bootcampForm">
+        <div id="form-success">
+          ✅ Your response has been received successfully!
+        </div>
+
+        <form id="bootcamp-form" novalidate>
           <label>Name</label>
           <input name="fullname" placeholder="First Name, Last Name" required>
 
@@ -66,37 +77,62 @@
 
           <label for="referer">Current Engagement</label>
           <p>What do you do now?</p>
-          <select name="referer" id="referer" required>
+          <select name="currentEngagement" id="currentEngagement" required>
             <option value="" disabled selected>Select an option</option>
-            <option value="LinkedIn">Student</option>
-            <option value="Facebook">Employed</option>
-            <option value="Twitter/X">Unemployed</option>
+            <option value="Student">Student</option>
+            <option value="Employed">Employed</option>
+            <option value="Self Employed">Self Employed</option>
+            <option value="Unemployed">Unemployed</option>
+            <option value="Others">Others</option>
+          </select>
+
+          <label for="referer">Current Field / Industry</label>
+          <p>What is current Field or Industry?</p>
+          <select name="currentField" id="currentField" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Student">Information Technology (IT)</option>
+            <option value="Employed">Banking/Finance</option>
+            <option value="Self Employed">Education</option>
+            <option value="Unemployed">Healthcare</option>
+            <option value="Unemployed">Government/Public Sector</option>
+            <option value="Unemployed">Law/Legal</option>
+            <option value="Unemployed">Agriculture</option>
             <option value="Others">Others</option>
           </select>
 
           <label for="referer">IT / Computer Proficiency</label>
-          <select name="referer" id="referer" required>
+          <select name="proficiency" id="proficiency" required>
             <option value="" disabled selected>Select an option</option>
-            <option value="LinkedIn">Beginner</option>
-            <option value="Facebook">Intermediate</option>
-            <option value="Twitter/X">Professional</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Professional">Professional</option>
             <option value="Others">Others</option>
           </select>
 
           <label>Motivation</label>
           <p>What motivated you to apply for this cybersecurity bootcamp?</p>
-          <textarea name="motivation" rows="3"
-            placeholder="Share your reasons - e.g passion, curiosity, real-world impact, etc." required></textarea>
+          <textarea id="message1" class="word-count" name="motivation" rows="6"
+            placeholder="Share your reasons - e.g passion, curiosity etc. Write minimum of 100 words."
+            required></textarea>
 
           <label>Goals</label>
           <p>What do you hope to achieve by completing this bootcamp?</p>
-          <textarea name="expectation" rows="3" placeholder="Write your short-term and long-term goals"
-            required></textarea>
+          <textarea id="message2" class="word-count" name="expectation" rows="6"
+            placeholder="Describe your short-term and long-term goals. Write minimum of 100 words." required></textarea>
 
           <label>Experience</label>
           <p>Have you previously engaged with any cybersecurity concepts, tools, or learning platforms?</p>
-          <textarea name="experience" rows="3" placeholder="Briefly describe any prior exposure or related experience"
-            required></textarea>
+          <div class="experience-group">
+            <label><input class="yes" type="radio" name="hasExperience" value="yes" required> Yes</label>
+            <label><input class="no" type="radio" name="hasExperience" value="no"> No</label>
+          </div>
+
+          <div id="experience-details" style="display: none;">
+            <label for="experience-detail">Please describe your experience</label>
+            <textarea id="experience-detail" name="experience" rows="3"
+              placeholder="Briefly describe any prior exposure or related experience"></textarea>
+          </div>
+
 
           <label for="referer">How did you hear about this bootcamp?</label>
           <select name="referer" id="referer" required>
@@ -116,7 +152,7 @@
           <input name="session" placeholder="e.g 3-5 hours per session" required>
 
           <label>Certificate Preference</label>
-          <p>Would you like to be awarded certificate of completion after this program?</p>
+          <p>Would you love to enroll for advance cybersecurity training after this bootcamp?</p>
           <select name="referer" id="referer" required>
             <option value="" disabled selected>Select an option</option>
             <option value="Yes">Yes</option>
@@ -163,16 +199,16 @@
         <h4>Follow Us On</h4>
         <div class="social-links">
           <a href="https://www.facebook.com/cybernalytixprofessionals/" target="_blank" rel="noopener noreferrer"><img
-              src="images/icons8-facebook (1).svg" alt="Facebook" /></a>
+              src="images/icons8-facebook (2).svg" alt="Facebook" /></a>
 
           <a href="https://www.linkedin.com/company/cybernalytix" target="_blank" rel="noopener noreferrer"><img
-              src="images/icons8-linkedin (1).svg" alt="LinkedIn" /></a>
+              src="images/icons8-linkedin (2).svg" alt="LinkedIn" /></a>
 
           <a href="https://x.com/CybernalytixLtd" target="_blank" rel="noopener noreferrer"><img
-              src="images/icons8-x.svg" alt="LinkedIn" /></a>
+              src="images/icons8-x (1).svg" alt="X" /></a>
 
           <a href="https://www.instagram.com/cybernalytix/" target="_blank" rel="noopener noreferrer"><img
-              src="images/icons8-instagram.svg" alt="Instagram" /></a>
+              src="images/icons8-instagram (1).svg" alt="Instagram" /></a>
         </div>
       </div>
     </div>

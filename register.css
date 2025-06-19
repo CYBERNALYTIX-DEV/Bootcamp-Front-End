@@ -5,7 +5,7 @@
 
 .register-container {
   display: flex;
-  gap: 80px;
+  gap: 40px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -25,6 +25,23 @@
   width: 100%;
   max-width: 250px;
   height: auto;
+}
+
+.form-note {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: justify;
+  word-break: break-word;
+}
+
+#form-success {
+  display: none;
+  padding: 16px;
+  background: #e6ffed;
+  border: 1px solid #27ae60;
+  color: #1b5e20;
+  margin-bottom: 20px;
+  border-radius: 6px;
 }
 
 .register-form {
@@ -116,4 +133,23 @@ form button:hover {
   width: 50%;
   margin-bottom: 0;
   font-size: 0.8rem;
+}
+
+.experience-group {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.experience-group label {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.yes,
+.no {
+  border: 1px solid red;
+  margin-top: 3px;
 }
