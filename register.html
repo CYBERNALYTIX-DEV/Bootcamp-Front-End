@@ -64,11 +64,24 @@
           <label>Country of Residence</label>
           <input name="residence" placeholder="Where you live" required>
 
-          <label>Current Engagement</label>
-          <input name="employment" placeholder="Student, Employed / Unemployed" required>
+          <label for="referer">Current Engagement</label>
+          <p>What do you do now?</p>
+          <select name="referer" id="referer" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="LinkedIn">Student</option>
+            <option value="Facebook">Employed</option>
+            <option value="Twitter/X">Unemployed</option>
+            <option value="Others">Others</option>
+          </select>
 
-          <label>IT / Computer Proficiency</label>
-          <input name="proficiency" placeholder="Beginner, Intermediate, Professional" required>
+          <label for="referer">IT / Computer Proficiency</label>
+          <select name="referer" id="referer" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="LinkedIn">Beginner</option>
+            <option value="Facebook">Intermediate</option>
+            <option value="Twitter/X">Professional</option>
+            <option value="Others">Others</option>
+          </select>
 
           <label>Motivation</label>
           <p>What motivated you to apply for this cybersecurity bootcamp?</p>
@@ -85,8 +98,18 @@
           <textarea name="experience" rows="3" placeholder="Briefly describe any prior exposure or related experience"
             required></textarea>
 
-          <label>How did you hear about this bootcamp?</label>
-          <input name="referer" placeholder="LinkedIn, Facebook, Twitter/X, WhatsApp" required>
+          <label for="referer">How did you hear about this bootcamp?</label>
+          <select name="referer" id="referer" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Twitter/X">Twitter/X</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Friend/Colleague">Friend/Colleague</option>
+            <option value="Others">Others</option>
+          </select>
+
 
           <label>Time Commitment</label>
           <p>How many hours are you willing to commit to each session of this bootcamp if admitted?</p>
@@ -94,7 +117,12 @@
 
           <label>Certificate Preference</label>
           <p>Would you like to be awarded certificate of completion after this program?</p>
-          <input name="certificate" placeholder="Yes / No, Unsure" required>
+          <select name="referer" id="referer" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Unsure">Unsure</option>
+          </select>
 
           <div class="submit-confirm">
             <button type="submit">Submit</button>
