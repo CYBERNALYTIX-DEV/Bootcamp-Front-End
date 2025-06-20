@@ -43,7 +43,6 @@ function countWords(text) {
 }
 
 // Helper function to show word count feedback
-// Helper function to show word count feedback
 function showWordCountFeedback(textarea, wordCount, minWords = 100) {
   let feedbackElement = textarea.nextElementSibling;
 
