@@ -62,7 +62,7 @@ function showWordCountFeedback(textarea, wordCount, minWords = 100) {
   }
 
   if (wordCount < minWords) {
-    feedbackElement.textContent = `You have ${wordCount}/${minWords} words... (minimum ${minWords} words required)`;
+    feedbackElement.textContent = `A minimum of ${minWords} words is required`;
     feedbackElement.style.color = "red";
     return false;
   } else {
@@ -256,7 +256,7 @@ if (form) {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Network error! Please check your connection and try again.");
+      alert("An error occured! Please check your connection and try again.");
     } finally {
       // Re-enable submit button
       submitButton.disabled = false;
