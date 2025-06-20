@@ -209,13 +209,16 @@ if (form) {
     submitButton.textContent = "Submitting...";
 
     try {
-      const response = await fetch("http://localhost:1000/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://bootcamp-backend-t96p.onrender.com/api/users",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await response.json();
 
