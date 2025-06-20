@@ -272,6 +272,12 @@ body {
   border-color: #ffffff;
 }
 
+.word-count-feedback {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
 /* why join section */
 .why-join {
   background-color: #fff;
