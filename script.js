@@ -210,7 +210,7 @@ if (form) {
 
     try {
       const response = await fetch(
-        "https://bootcamp-backend-t96p.onrender.com/api/users",
+        "https://bootcamp-backend-t96p.onrender.com/users",
         {
           method: "POST",
           headers: {
