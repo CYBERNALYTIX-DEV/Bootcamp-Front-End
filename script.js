@@ -44,20 +44,25 @@ function countWords(text) {
 
 // Helper function to show word count feedback
 function showWordCountFeedback(textarea, wordCount, minWords = 100) {
-  let feedbackElement = textarea.parentNode.querySelector(
-    ".word-count-feedback"
-  );
+  let feedbackElement = textarea.nextElementSibling;
 
-  if (!feedbackElement) {
+  // Check if the next element is already our feedback element
+  if (
+    !feedbackElement ||
+    !feedbackElement.classList.contains("word-count-feedback")
+  ) {
     feedbackElement = document.createElement("div");
     feedbackElement.className = "word-count-feedback";
     feedbackElement.style.fontSize = "0.8rem";
     feedbackElement.style.marginTop = "5px";
-    textarea.parentNode.appendChild(feedbackElement);
+    feedbackElement.style.marginBottom = "15px";
+
+    // Insert the feedback element right after the textarea
+    textarea.parentNode.insertBefore(feedbackElement, textarea.nextSibling);
   }
 
   if (wordCount < minWords) {
-    feedbackElement.textContent = `You have ${wordCount}/${minWords} words... (minimum of ${minWords} words is required)`;
+    feedbackElement.textContent = `You have ${wordCount}/${minWords} words... (minimum ${minWords} words required)`;
     feedbackElement.style.color = "red";
     return false;
   } else {
