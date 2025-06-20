@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+    <title>Admin Dashboard - Cybernalytix</title>
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="login-section" class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="images/image.png" alt="cybernalytix logo" width="200px">
+            </div>
+            <h2>Admin Login</h2>
+            <form id="login-form">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter admin password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="login-error" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="dashboard-section" class="dashboard-container" style="display: none;">
+        <header class="admin-header">
+            <div class="logo">
+                <img src="images/image.png" alt="cybernalytix logo" width="150px">
+            </div>
+            <div class="admin-controls">
+                <span id="total-users" class="user-count">Total Applicants: 0</span>
+                <button id="refresh-btn" class="refresh-btn">Refresh</button>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <main class="admin-main">
+            <div class="dashboard-title">
+                <h1>Bootcamp Applicants</h1>
+            </div>
+
+            <div id="loading" class="loading" style="display: none;">
+                <p>Loading Applicants...</p>
+            </div>
+
+            <div id="users-container" class="users-container">
+                <div class="table-container">
+                    <table id="users-table" class="users-table">
+                        <thead>
+                            <tr>
+                                <th>S/N</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Gender</th>
+                                <th>Residence</th>
+                                <th>Current Engagement</th>
+                                <th>Field</th>
+                                <th>IT Proficiency</th>
+                                <th>Experience</th>
+                                <th>Referrer</th>
+                                <th>Time Commitment</th>
+                                <th>Certificate Interest</th>
+                                <th>Registration Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-tbody">
+                            <!-- Users will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="no-users" class="no-users" style="display: none;">
+                <p>No Applicants has registered yet</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- User Details Modal -->
+    <div id="user-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Applicant Details</h2>
+                <span class="close" id="close-modal">&times;</span>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- User details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
